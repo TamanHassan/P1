@@ -1,8 +1,11 @@
+import React from "react";
+import { Link } from 'react-router-dom';
+
 function Home() {
     return (
         <div>
             <h1>Home Page</h1>
-            <p>Portfolio</p>
+            <p>Click to view <Link to="/portfolio">Portfolio</Link></p>
           </div>
     );
 }

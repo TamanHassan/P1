@@ -1,18 +1,23 @@
-import ProjectCard from "/components/ProjectCard.jsx";
-function Portfolio() {
-    return (
-        <div>
-            <h1>Portfolio Page</h1>
-            <p>Welcome to my portfolio!</p>
-        </div>
-    );
-}
+import { useState } from "react";
+import ProjectCard from "../components/ProjectCard.jsx";
+
 
 function Portfolio() {
-  return (
-    <div style={{ padding: "20px" }}>
-      <h1>Portfolio</h1>
-      <ProjectCard
+    const [showProjects, setShowProjects] = useState(false);
+
+    
+    return (
+        <div style={{ padding: "20px" }}>
+            <h1>Portfolio Page</h1>
+
+    <button onClick={() => setShowProjects(!showProjects)}>
+        {showProjects ? "Hide Projects" : "Show Projects"}
+    </button>
+
+    {showProjects && (
+
+        <>
+      <ProjectCard 
         name="My Bucket list"
         screenshot="/images/mybucketlist.png"
         github="https://github.com/TamanHassan/My-bucket-list.git"
@@ -44,6 +49,9 @@ function Portfolio() {
         role= "Front-end Developer"
         challenges= " Getting the correct measurements and proportions to reflect the original image"
       />
+        </>
+    )}
+      
       </div>
     );
 }
