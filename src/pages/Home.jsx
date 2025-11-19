@@ -6,6 +6,7 @@ function Home() {
         <div>
             <h1>Home Page</h1>
             <p>Click to view <Link to="/portfolio">Portfolio</Link></p>
+            <p>Click to view <Link to="/about">About</Link></p>
           </div>
     );
 }
