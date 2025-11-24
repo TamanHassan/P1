@@ -7,10 +7,23 @@ function ProjectCard( {
     whatYouLearned,
     role,
     challenges,
+    onClick
 } ) {
 
+    const projectData = {
+        name,
+        screenshot,
+        repo: github,
+        tech,
+        description,
+        whatYouLearned,
+        role,
+        challenges
+    };
+
+
     return (
-        <div style={styles.card}>
+        <div style={styles.card} onClick={() => onClick(projectData)}>
             <img src={screenshot} alt={name} style= {styles.image}/>
 
             <h2>{name}</h2>

@@ -1,9 +1,12 @@
 import { useState } from "react";
 import ProjectCard from "../components/ProjectCard.jsx";
+import ProjectPopup from "../components/ProjectPopup.jsx";
+
 
 
 function Portfolio() {
     const [showProjects, setShowProjects] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     
     return (
@@ -26,6 +29,7 @@ function Portfolio() {
         whatYouLearned="I learned how to write basic html code and structure a webpage."
         role="Front-end Developer"
         challenges= "A challenges was learning how styles and images can be integrated with html"
+        onClick={(data)=> setSelectedProject(data)} 
       />
     
      <ProjectCard
@@ -37,6 +41,7 @@ function Portfolio() {
         whatYouLearned= "I learned how to create animations using css and html"
         role= "Front-end Developer"
         challenges= "A challenges was learning how to create smooth animations using keyframes"
+        onClick={(data)=> setSelectedProject(data)} 
       />
 
        <ProjectCard
@@ -48,9 +53,19 @@ function Portfolio() {
         whatYouLearned= "Learned how to recreate an image from scracth using html and css"
         role= "Front-end Developer"
         challenges= " Getting the correct measurements and proportions to reflect the original image"
+        onClick={(data)=> setSelectedProject(data)} 
       />
         </>
     )}
+    {/* Render popup if a project is clicked*/}
+    {selectedProject && (
+        <ProjectPopup 
+            {...selectedProject}
+            onClose={() => setSelectedProject(null)}
+        />
+    )}
+
+
       
       </div>
     );
