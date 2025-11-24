@@ -23,7 +23,14 @@ function ProjectCard( {
 
 
     return (
-        <div style={styles.card} onClick={() => onClick(projectData)}>
+        <div 
+        style={styles.card} 
+        onClick={() => {
+            console.log("Project clicked:", projectData);
+            onClick(projectData);
+        }}
+        >
+           
             <img src={screenshot} alt={name} style= {styles.image}/>
 
             <h2>{name}</h2>
@@ -50,6 +57,8 @@ function ProjectCard( {
         image: {
             width: "100%",
             borderRadius: "8px",
+
+        
 
         }
         };

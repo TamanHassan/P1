@@ -1,5 +1,4 @@
-import React from 'react';
-import "./Popup.css";
+import "../Popup.css";
 
 export default function ProjectPopup ({ 
     name,
@@ -18,7 +17,7 @@ export default function ProjectPopup ({
                 <button className="close-btn" onClick={onClose}>X</button>
 
                 <h2>{name}</h2>
-                <img src={screenshot
+                <img src={screenshot} alt={name} className="popup-image"/>
 
                 <p><strong>Description:</strong> {description}</p>
                 <p><strong>Tech Used:</strong> {tech}</p>

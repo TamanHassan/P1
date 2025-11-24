@@ -1,12 +1,13 @@
 import { useState } from "react";
 import ProjectCard from "../components/ProjectCard.jsx";
-import ProjectPopup from "../components/ProjectPopup.jsx";
+import ProjectPopup from "../pages/ProjectPopup.jsx";
 
 
 
 function Portfolio() {
     const [showProjects, setShowProjects] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
+    console.log("Selected project:", selectedProject);
 
     
     return (
