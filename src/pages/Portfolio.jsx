@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProjectCard from "../components/ProjectCard.jsx";
-import ProjectPopup from "../pages/ProjectPopup.jsx";
+import Popupwindows from "../components/Popupwindows.jsx";
 
 
 
@@ -58,9 +58,9 @@ function Portfolio() {
       />
         </>
     )}
-    {/* Render popup if a project is clicked*/}
+    
     {selectedProject && (
-        <ProjectPopup 
+        <Popupwindows
             {...selectedProject}
             onClose={() => setSelectedProject(null)}
         />
