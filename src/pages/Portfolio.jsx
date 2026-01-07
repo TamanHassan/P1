@@ -62,7 +62,7 @@ function Portfolio() {
 
     return (
         <div style= {{ padding: "20px" }}>
-            <h1>Portfolio Page</h1>
+            <h1>Portfolio</h1>
             <input
             type="text"
             placeholder="Search projects by name or tech"
